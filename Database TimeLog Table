@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`TimeLog` (
+  `Time_Log_ID` INT NOT NULL AUTO_INCREMENT,
+  `Users_ID` INT NOT NULL,
+  `StartTime` DATETIME NOT NULL,
+  `EndTime` DATETIME NOT NULL,
+  `Break_Minutes` INT NOT NULL DEFAULT 0,
+  `Sick_Hours` INT NULL,
+  `Sick_Days` INT NULL,
+  `Leave_Hours` INT NULL,
+  `Leave_Days` INT NULL,
+  `Comment` VARCHAR(500) NULL,
+  PRIMARY KEY (`Time_Log_ID`, `Users_ID`),
+  UNIQUE INDEX `Time_Log_ID_UNIQUE` (`Time_Log_ID` ASC))
+ENGINE = InnoDB
