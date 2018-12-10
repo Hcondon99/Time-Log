@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`Users` (
+  `Users_ID` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(255) NOT NULL,
+  `Employment_Type` ENUM('Full Time', 'Part Time', 'Casual') NOT NULL,
+  `TimeLog_Admin` TINYINT(1) NOT NULL DEFAULT 0,
+  UNIQUE INDEX `ID_UNIQUE` (`Users_ID` ASC),
+  PRIMARY KEY (`Users_ID`))
+ENGINE = InnoDB
